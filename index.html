@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Major | Roupas esportivas e kits</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#topo"><img src="logo.jpg" alt="Mascote da Major">Major</a>
+  <nav><a class="l" href="#kit">Monte seu kit</a><a class="l" href="#loja">Loja</a><a class="l" href="#lojas">Onde estamos</a>
+  <button class="cartbtn" id="openCart" aria-label="Abrir carrinho">Carrinho (<span id="cc">0</span>)</button></nav>
+</header>
+<main id="topo">
+  <div class="hero" id="kit">
+    <div>
+      <h1>Monte o look. A gente separa.</h1>
+      <p>Escolha a camisa, escolha o short e leve os dois com 10% de desconto. Pague no Pix pelo site, com frete calculado pelo seu CEP, e acompanhe tudo no WhatsApp.</p>
+    </div>
+    <div class="kit" aria-label="Monte seu kit">
+      <div class="stage" id="stage"></div>
+      <label>Camisa<select id="kTop"></select></label>
+      <div class="sw" id="kTopC" role="group" aria-label="Cor da camisa"></div>
+      <label>Short<select id="kBot"></select></label>
+      <div class="sw" id="kBotC" role="group" aria-label="Cor do short"></div>
+      <div class="row"><div><span class="old" id="kOld"></span><span class="price" id="kPrice"></span></div>
+      <button class="btn" id="kAdd">Adicionar kit</button></div>
+    </div>
+  </div>
+  <section id="loja" style="padding-top:16px">
+    <h2>Escolha peça por peça</h2>
+    <div class="tools">
+      <span id="chips" role="group" aria-label="Categorias"></span>
+      <input id="q" type="search" placeholder="Buscar peça" aria-label="Buscar peça">
+      <select id="sort" class="sp" aria-label="Ordenar"><option value="0">Mais vendidos</option><option value="1">Menor preço</option><option value="2">Maior preço</option></select>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+  <section>
+    <div class="trust">
+      <div><i>✓</i><span><b>Clientes</b>Atendimento direto, sem robô</span></div>
+      <div><i>⇢</i><span><b>Entregas</b>Frete pelo CEP, grátis acima de R$ 199 nas zonas próximas</span></div>
+      <div><i>$</i><span><b>Pagamentos</b>Pix com 5% off ou cartão em até 3x</span></div>
+      <div><i>i</i><span><b>Troca</b>Tamanho errado? Troca em até 7 dias</span></div>
+    </div>
+  </section>
+  <section id="lojas">
+    <h2>Duas lojas para você provar</h2>
+    <p>Loja Ibura: Av. Dois Rios, 792<br>Loja Prazeres: Rua Santo Elias, 54</p>
+  </section>
+</main>
+<footer>Major © 2026 · Preços e peças de exemplo, ajuste no código.</footer>
+
+<div class="ov" id="ov"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="tile" id="mArt"></div>
+  <div class="body"><h2 id="mt"></h2><div class="price" id="mp"></div>
+    <div><b>Cor:</b> <span id="mcn"></span><div class="sw" id="mc" style="margin-top:6px"></div></div>
+    <div><b>Tamanho</b><div class="sizes" id="ms" style="margin-top:6px"></div></div>
+    <button class="btn" id="mAdd">Adicionar ao carrinho</button>
+    <button class="btn alt" id="mClose">Voltar</button></div></div></div>
+
+<aside class="drawer" id="drawer" aria-label="Carrinho">
+  <div class="dh"><h2>Seu carrinho</h2><button class="btn alt" id="dClose">Fechar</button></div>
+  <div class="dl" id="dl"></div>
+  <div class="df" id="df"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
